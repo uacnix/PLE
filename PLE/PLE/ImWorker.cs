@@ -1,4 +1,4 @@
-﻿namespace WpfApplication1
+﻿namespace PLE
 {
     internal class ImWorker
     {

@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WpfApplication1
+namespace PLE
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -29,7 +29,7 @@ namespace WpfApplication1
         {
             if (sender.Equals(buttonImport))
             {
-                Importer i = new Importer(textBoxExport.Text);
+                Importer i = new Importer(textBoxExport.Text,8);
                 i.Import();
             }
         }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace WpfApplication1
+namespace PLE
 {
     internal class Importer
     {
@@ -35,7 +35,7 @@ namespace WpfApplication1
 
         private int getLineCount()
         {
-            return null;
+            return 0;
         }
     }
 }
