@@ -1,4 +1,7 @@
-﻿namespace PLE
+﻿using System.Collections.Generic;
+using System.IO;
+
+namespace PLE
 {
     internal class ImWorker
     {
@@ -11,6 +14,16 @@
             this.path = path;
             this.lineStart = v;
             this.lineEnd = lineCount;
+        }
+        public List<string> readLines()
+        {
+            int i = 0;
+            while (i < lineStart)
+            {
+                StreamReader sr = new StreamReader(path);
+
+            }
+            return null;
         }
     }
 }
