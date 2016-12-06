@@ -12,17 +12,23 @@ namespace PLE
         public ImWorker(string path, int v, int lineCount)
         {
             this.path = path;
-            this.lineStart = v;
-            this.lineEnd = lineCount;
+            lineStart = v;
+            lineEnd = lineCount;
         }
         public List<string> readLines()
         {
-            int i = 0;
-            while (i < lineStart)
+            List<string> output = new List<string>();
+            string s;
+            StreamReader sr = new StreamReader(path);
+            for(int i = 0; i < lineStart; i++)
             {
-                StreamReader sr = new StreamReader(path);
-
+                sr.ReadLine();
             }
+            for(int i = lineStart; i < lineEnd; i++)
+            {
+                output.Add(sr.ReadLine());
+            }
+
             return null;
         }
     }
