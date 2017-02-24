@@ -29,7 +29,7 @@ namespace PLE
                 output.Add(sr.ReadLine());
             }
 
-            return null;
+            return output;
         }
     }
 }

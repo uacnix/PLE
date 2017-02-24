@@ -9,6 +9,9 @@ namespace PLE
     /// </summary>
     public partial class MainWindow : Window
     {
+        private int threads = 0;
+        private Importer i;
+        private listConverter conv;
         public MainWindow()
         {
             InitializeComponent();
@@ -19,8 +22,9 @@ namespace PLE
         {
             if (sender.Equals(buttonImport))
             {
-                Importer i = new Importer(textBoxImport.Text,8);
+                i = new Importer(textBoxImport.Text,threads);
                 i.Import();
+
             }
         }
 
@@ -33,6 +37,17 @@ namespace PLE
                 textBoxImport.Text = ofd.FileName;
             }
             
+        }
+
+        private void slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            Console.WriteLine(slider.Value);
+            threads = (int)slider.Value;
+        }
+
+        private void buttonClear_Click(object sender, RoutedEventArgs e)
+        {
+            i.clearTable();
         }
     }
 }
